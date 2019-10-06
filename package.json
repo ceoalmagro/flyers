@@ -1,0 +1,21 @@
+{
+  "name": "flyers",
+  "version": "1.0.0",
+  "repository": "git@github.com:ceoalmagro/flyers.git",
+  "author": "Sr Komodo <komodosr@gmail.com>",
+  "license": "GPL-3.0",
+  "browserslist": [
+    "> 5%"
+  ],
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-svelte": "^4.0.4"
+  },
+  "dependencies": {
+    "svelte": "^3.12.1"
+  }
+}
