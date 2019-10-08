@@ -1,0 +1,11 @@
+@import url("https://code.cdn.mozilla.net/fonts/zilla-slab.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Zilla Slab", Cambria, "Hoefler Text", Utopia, "Liberation Serif",
+    "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+}
