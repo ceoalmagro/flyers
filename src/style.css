@@ -5,7 +5,13 @@
 }
 
 body {
+  display: flex;
+  align-items: safe center;
+  justify-content: safe center;
   margin: 0;
+  padding: 1rem;
+  height: 100vh;
+
   font-family: "Zilla Slab", Cambria, "Hoefler Text", Utopia, "Liberation Serif",
     "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
 }

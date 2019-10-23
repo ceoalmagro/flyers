@@ -9,23 +9,27 @@
 <style>
   main {
     display: flex;
-    flex-direction: column;
-    align-items: safe center;
-    justify-content: safe center;
-    height: 100vh;
+    gap: 1rem;
+    max-height: 1024px;
+  }
+
+  @media (max-width: 1024px) {
+    main {
+      flex-direction: column;
+    }
   }
 
   .input {
     display: grid;
-    grid-template-columns: max-content max-content;
-    align-items: center;
-    align-content: center;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: max-content max-content 1fr;
     gap: 1rem;
-    padding: 1rem;
   }
 
   label {
+    padding: 0.5rem 0;
     text-align: right;
+    font-weight: bold;
   }
 
   textarea,
@@ -50,7 +54,7 @@
     </select>
     <label>Titulo:</label>
     <input type="text" bind:value={title} />
-    <label>Texto principal:</label>
+    <label>Texto:</label>
     <textarea bind:value={text} />
   </div>
   <Output {color} {title} {text} />

@@ -1,11 +1,12 @@
 <script>
+  import marked from "marked";
   export let color = "red";
   export let title = "Titulo";
   export let text = "Texto principal";
 </script>
 
 <style>
-  #output {
+  .output {
     width: 512px;
     height: 512px;
 
@@ -16,17 +17,25 @@
   }
 
   h1 {
-    margin: 0;
+    margin: 0 0 0.25em;
     text-align: center;
     max-width: 75%;
   }
 
-  p {
+  .text {
     background: white;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 4px;
     max-width: 75%;
     text-align: justify;
+  }
+
+  .text :global(*:first-child) {
+    margin-top: 0;
+  }
+
+  .text :global(*:last-child) {
+    margin-bottom: 0;
   }
 
   .red {
@@ -40,7 +49,9 @@
   }
 </style>
 
-<div id="output" class={color}>
+<div class="output {color}">
   <h1>{title}</h1>
-  <p>{text}</p>
+  <div class="text">
+    {@html marked(text)}
+  </div>
 </div>
