@@ -3,6 +3,14 @@
   export let color = "red";
   export let title = "Titulo";
   export let text = "Texto principal";
+
+  let width, height;
+  let fontSize = 16;
+  $: if (width < 400 && height < 400) {
+    fontSize++;
+  } else if (width > 500 || height > 500) {
+    fontSize--;
+  }
 </script>
 
 <style>
@@ -19,7 +27,7 @@
   }
 
   h1 {
-    margin: 0 0 0.25em;
+    margin: 0 0 0.25rem;
     text-align: center;
   }
 
@@ -56,8 +64,13 @@
 </style>
 
 <div class="output {color}">
-  <h1>{title}</h1>
-  <div class="text">
-    {@html marked(text)}
+  <div
+    style="font-size: {fontSize}px"
+    bind:clientWidth={width}
+    bind:clientHeight={height}>
+    <h1>{title}</h1>
+    <div class="text">
+      {@html marked(text)}
+    </div>
   </div>
 </div>
