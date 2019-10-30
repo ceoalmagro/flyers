@@ -12,4 +12,4 @@ var e,t=arguments[3];!function(t){"use strict";var n={newline:/^\n+/,code:/^( {4
 },{"svelte/internal":"YkLP","./output.svelte":"DJMg"}],"Focm":[function(require,module,exports) {
 "use strict";var t=e(require("./app.svelte"));function e(t){return t&&t.__esModule?t:{default:t}}const a={color:"red",title:"Ejemplo:",text:"![imagen](https://picsum.photos/400/100)\n\n# Subtitulo\n\n## Sub-subtitulo\n\n_italicas_, **bold**, `monospace`\n\n- Listas\n - Sub-listas\n - Re copado bro\n\n1. Listas ordenadas\n2. Blablabla..."},n=localStorage.getItem("state"),o=new t.default({target:document.body,props:n?JSON.parse(n):a});window.matchMedia("(max-width: 1024px)").addEventListener("change",t=>{document.querySelector("textarea").removeAttribute("style")});
 },{"./app.svelte":"dGzR"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.21d80145.js.map
+//# sourceMappingURL=src.21d80145.js.map
