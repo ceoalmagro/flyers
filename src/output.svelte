@@ -14,28 +14,34 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    padding: 1rem;
   }
 
   h1 {
     margin: 0 0 0.25em;
     text-align: center;
-    max-width: 75%;
   }
 
   .text {
     background: white;
     padding: 1rem;
     border-radius: 4px;
-    max-width: 75%;
     text-align: justify;
   }
 
-  .text :global(*:first-child) {
+  .text > :global(*:first-child) {
     margin-top: 0;
   }
 
-  .text :global(*:last-child) {
+  .text > :global(*:last-child) {
     margin-bottom: 0;
+  }
+
+  .text :global(img) {
+    display: block;
+    margin: auto;
+    max-width: 100%;
   }
 
   .red {

@@ -3,7 +3,7 @@
   export let color = "red";
   export let title = "Titulo";
   export let text = "Texto principal";
-  $: localStorage.setItem("props", JSON.stringify({ color, title, text }));
+  $: localStorage.setItem("state", JSON.stringify({ color, title, text }));
 </script>
 
 <style>
@@ -41,6 +41,16 @@
     border: 1px solid black;
     border-radius: 4px;
     padding: 0.5rem;
+  }
+
+  textarea {
+    resize: horizontal;
+  }
+
+  @media (max-width: 1024px) {
+    textarea {
+      resize: vertical;
+    }
   }
 </style>
 
