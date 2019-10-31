@@ -15,8 +15,8 @@
     align-items: center;
     justify-content: center;
 
-    width: 540px;
-    height: 540px;
+    width: 100vmin;
+    height: 100vmin;
   }
 
   .red {

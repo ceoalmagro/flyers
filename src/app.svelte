@@ -10,18 +10,12 @@
 
 <style>
   main {
-    display: grid;
-    grid-template-columns: max-content max-content;
-    place-content: safe center;
+    display: flex;
+    justify-content: safe center;
+    flex-wrap: wrap;
     gap: 1rem;
 
     height: 100vh;
-  }
-
-  @media (max-width: 840px) {
-    main {
-      grid-template-columns: initial;
-    }
   }
 </style>
 
