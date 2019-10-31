@@ -1,5 +1,10 @@
 <script>
   import marked from "marked";
+  marked.setOptions({
+    smartLists: true,
+    smartypants: true
+  });
+
   export let color = "red";
   export let title = "Titulo";
   export let text = "Texto principal";
@@ -44,6 +49,11 @@
 
   .text > :global(*:last-child) {
     margin-bottom: 0;
+  }
+
+  .text > :global(ul),
+  .text > :global(ol) {
+    padding-left: 2ch;
   }
 
   .text :global(img) {
