@@ -16,7 +16,7 @@
     "parcel-plugin-svelte": "^4.0.4"
   },
   "dependencies": {
-    "dom-to-image": "^2.6.0",
+    "dom-to-image-more": "^2.8.0",
     "marked": "^0.7.0",
     "svelte": "^3.12.1"
   }

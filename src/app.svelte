@@ -8,7 +8,7 @@
 
   let output;
   async function handleExport() {
-    const { toPng } = await import("dom-to-image");
+    const { toPng } = await import("dom-to-image-more");
     output.style.setProperty("--big", 2);
     const url = await toPng(output, {
       width: 1080,
