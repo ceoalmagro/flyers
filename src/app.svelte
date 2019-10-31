@@ -15,6 +15,7 @@
       height: 1080,
       style: { width: "1080px", height: "1080px" }
     });
+    output.style.setProperty("--big", 1);
     window.location = url;
   }
 </script>
