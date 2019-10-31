@@ -3,13 +3,15 @@ import App from "./app.svelte";
 const defaultState = {
   color: "red",
   title: "Ejemplo:",
-  text: `![imagen](https://picsum.photos/400/100)
+  text: `![imagen](https://picsum.photos/id/1/400/100)
 
 # Subtitulo
 
 ## Sub-subtitulo
 
-_italicas_, **bold**, \`monospace\`
+_italicas_, **negrita**
+
+<center>Texto centrado</center>
 
 - Listas
  - Sub-listas
