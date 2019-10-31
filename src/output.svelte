@@ -5,19 +5,21 @@
     smartypants: true
   });
 
+  export let element;
+
   export let color = "red";
   export let title = "Titulo";
   export let text = "Texto principal";
 
   let width, height;
   let scale = 1;
-  $: scale = Math.min(488 / width, 488 / height);
+  $: scale = Math.min(516 / width, 516 / height);
 </script>
 
 <style>
   .output {
-    width: 512px;
-    height: 512px;
+    width: 540px;
+    height: 540px;
 
     display: flex;
     flex-direction: column;
@@ -25,10 +27,8 @@
     justify-content: center;
 
     padding: 12px;
-  }
 
-  .container {
-    transition: transform 0.25s;
+    --big: 1;
   }
 
   h1 {
@@ -73,10 +73,10 @@
   }
 </style>
 
-<div class="output {color}">
+<div class="output {color}" bind:this={element}>
   <div
     class="container"
-    style="transform: scale({scale})"
+    style="transform: scale(calc({scale} * var(--big)))"
     bind:clientWidth={width}
     bind:clientHeight={height}>
     {#if title}

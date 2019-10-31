@@ -1,9 +1,22 @@
 <script>
   import Output from "./output.svelte";
+
   export let color = "red";
   export let title = "Titulo";
   export let text = "Texto principal";
   $: localStorage.setItem("state", JSON.stringify({ color, title, text }));
+
+  let output;
+  async function handleExport() {
+    const { toPng } = await import("dom-to-image");
+    output.style.setProperty("--big", 2);
+    const url = await toPng(output, {
+      width: 1080,
+      height: 1080,
+      style: { width: "1080px", height: "1080px" }
+    });
+    window.location = url;
+  }
 </script>
 
 <style>
@@ -43,6 +56,24 @@
     padding: 0.5rem;
   }
 
+  button {
+    font: inherit;
+    color: inherit;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background: hsl(125, 97%, 58%);
+    grid-column: 2 / -1;
+  }
+
+  button:hover {
+    background: hsl(125, 97%, 48%);
+  }
+
+  button:active {
+    background: hsl(125, 97%, 38%);
+  }
+
   textarea {
     resize: horizontal;
   }
@@ -66,6 +97,7 @@
     <input type="text" bind:value={title} />
     <label>Texto:</label>
     <textarea bind:value={text} />
+    <button on:click={handleExport}>Exportar</button>
   </div>
-  <Output {color} {title} {text} />
+  <Output bind:element={output} {color} {title} {text} />
 </main>
