@@ -6,6 +6,10 @@
   });
 
   export let color, title, text;
+
+  let w1, h1, w2, h2;
+  let scale = 1;
+  $: scale = Math.min((w1 - 32) / w2, (h1 - 32) / h2);
 </script>
 
 <style>
@@ -55,13 +59,19 @@
   }
 </style>
 
-<div class="output {color}">
-  {#if title}
-    <h1 class="title">{title}</h1>
-  {/if}
-  {#if text}
-    <div class="text">
-      {@html marked(text)}
-    </div>
-  {/if}
+<div class="output {color}" bind:clientWidth={w1} bind:clientHeight={h1}>
+  <div
+    class="container"
+    style="transform: scale({scale})"
+    bind:clientWidth={w2}
+    bind:clientHeight={h2}>
+    {#if title}
+      <h1 class="title">{title}</h1>
+    {/if}
+    {#if text}
+      <div class="text">
+        {@html marked(text)}
+      </div>
+    {/if}
+  </div>
 </div>
