@@ -5,12 +5,8 @@
   export let text = "Texto principal";
 
   let width, height;
-  let fontSize = 16;
-  $: if (width < 400 && height < 400) {
-    fontSize++;
-  } else if (width > 500 || height > 500) {
-    fontSize--;
-  }
+  let scale = 1;
+  $: scale = Math.min(488 / width, 488 / height);
 </script>
 
 <style>
@@ -23,7 +19,11 @@
     align-items: center;
     justify-content: center;
 
-    padding: 1rem;
+    padding: 12px;
+  }
+
+  .container {
+    transition: transform 0.25s;
   }
 
   h1 {
@@ -65,7 +65,8 @@
 
 <div class="output {color}">
   <div
-    style="font-size: {fontSize}px"
+    class="container"
+    style="transform: scale({scale})"
     bind:clientWidth={width}
     bind:clientHeight={height}>
     <h1>{title}</h1>
