@@ -69,9 +69,13 @@
     style="transform: scale({scale})"
     bind:clientWidth={width}
     bind:clientHeight={height}>
-    <h1>{title}</h1>
-    <div class="text">
-      {@html marked(text)}
-    </div>
+    {#if title}
+      <h1>{title}</h1>
+    {/if}
+    {#if text}
+      <div class="text">
+        {@html marked(text)}
+      </div>
+    {/if}
   </div>
 </div>
