@@ -10,6 +10,35 @@
     gap: 1rem;
   }
 
+  label {
+    padding-top: 0.5rem;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    padding: 0.5rem;
+    margin: 0;
+    border: none;
+    background: hsl(0, 0%, 95%);
+    color: inherit;
+    font-family: inherit;
+    border-radius: 4px;
+  }
+
+  button {
+    background: hsl(120, 100%, 70%);
+  }
+
+  button:hover {
+    background: hsl(120, 100%, 60%);
+  }
+
+  button:active {
+    background: hsl(120, 100%, 45%);
+  }
+
   textarea {
     resize: none;
   }

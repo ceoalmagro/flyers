@@ -16,6 +16,7 @@
     gap: 1rem;
 
     height: 100vh;
+    padding: 1rem;
   }
 </style>
 

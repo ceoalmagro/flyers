@@ -15,12 +15,18 @@
 <style>
   .output {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    width: 100vmin;
-    height: 100vmin;
+    width: calc(100vmin - 2rem);
+    height: calc(100vmin - 2rem);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .red {
