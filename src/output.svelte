@@ -51,11 +51,11 @@
     border-radius: 4px;
   }
 
-  .text > :global(:first-child) {
+  .text :global(:first-child) {
     margin-top: 0;
   }
 
-  .text > :global(:last-child) {
+  .text :global(:last-child) {
     margin-bottom: 0;
   }
 
