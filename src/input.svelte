@@ -4,6 +4,7 @@
 
 <style>
   .input {
+    flex: 1 1;
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-template-rows: max-content max-content 1fr max-content;
